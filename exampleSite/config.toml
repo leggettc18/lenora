@@ -1,0 +1,21 @@
+theme = "lenora"
+languageCode = "en-us"
+baseurl = "http://example.com/"
+title = "Lenora"
+
+author = "Christopher Leggett"
+copyright = "Copyright © 2020, Christopher Leggett, all rights reserved."
+
+# Code higlighting settings
+pygmentsCodefences = true
+pygmentsStyle = "vs"
+
+[params]
+    name = "Lenora"
+    description = "A simple bootstraped theme for Hugo, build with Tailwindcss."
+
+    github_user = "leggettc18"
+    github_repo = "https://github.com/leggettc18/lenora"
+    github_banner = true
+
+    favicon = "favicon.ico"
