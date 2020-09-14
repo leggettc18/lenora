@@ -10,6 +10,7 @@ p {
   margin: 1rem;
 }
 
+/* purgecss ignore */
 img {
   width: 100%;
   height: auto;
