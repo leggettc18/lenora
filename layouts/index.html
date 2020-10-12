@@ -2,5 +2,24 @@
 <article class="text-center text-gray-700">
     <h1 class="font-serif font-thin text-5xl text-gray-500">{{ .Title }}</h1>
     {{ .Content }}
+    <hr />
+    <div class="text-left">
+    {{ range .Site.Sections }}
+        <h2 class="font-serif font-thin text-4xl text-gray-600 mt-3 pt-3">
+            Recent {{ .Title }}
+        </h2>
+        {{ range first 3 .Pages }}
+            <p>
+                <div>
+                    <a href="{{.Permalink}}">{{ .Title }}</a>
+                </div>
+                <div>
+                    {{ .Summary }}
+                </div>
+            </p>
+        {{ end }}
+        <a class="text-gray-600" href={{.Permalink}}>More {{ .Title }}...</a>
+    {{ end }}
+    </div>
 </article>
 {{ end }}
