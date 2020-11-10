@@ -2,7 +2,7 @@
 {{ range .Pages }}
     <article class="text-gray-700 sm:mx-12 mb-4 wrapper">
         <h1 class="font-bold font-thin text-3xl text-gray-700"><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
-        {{ .Content }}
+        <p>{{ .Summary }}</p>
     </article>
 {{ end }}
 {{ end }}
