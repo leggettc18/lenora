@@ -1,14 +1,17 @@
-# Hugo Starter Theme with Tailwind CSS
+# The Lenora Hugo Theme
 
-Starter files for a Hugo theme with Tailwind CSS.
+This is the Lenora CSS theme. It is a somewhat minimal theme with a black and pale purple color
+scheme. I named it after my wonderful girlfriend, because I love her and those are some
+of her favorite colors.
+
+It is forked from [Dirkolbrich's Hugo Starter Theme with Tailwind CSS](https://github.com/dirkolbrich/hugo-theme-tailwindcss-starter), and so shares the following with it. The rest
+of this readme is mostly shared from that repo, as all of it applies to this theme as well.
 
 - set up to use [Tailwind CSS](https://tailwindcss.com) - v1.6
 - use [Hugo Pipes](https://gohugo.io/hugo-pipes/) to build and load css based on `dev` or `build` environment
 - purge unused css classes with [PurgeCSS](https://www.purgecss.com) for `build`, but __not__ in `dev`
-- works as separate theme repo or as a local theme folder within a Hugo site
-- basic template setup with an index page, an about page and a posts category
 - responsive navigation header ~~with minimal javascript~~ with pure css to hide the nav on small screens
-- to keep that s***er down, the theme features a sticky footer
+- the theme features a sticky footer
 - included helper partials to show Hugo parameters and Tailwind CSS breakpoints during development
 
 Live long and code.
@@ -29,7 +32,7 @@ Make sure to use a minimum Hugo version of v0.69.0 and above.
 - clone and rename the repo
 
 ```bash
-git clone https://github.com/dirkolbrich/hugo-theme-tailwindcss-starter new-theme-name
+git clone https://github.com/leggettc18/lenora new-theme-name
 ```
 
 - to make that theme your own, switch into the newly created folder, remove the git history from this starter repo and initiate a new git repo
@@ -71,7 +74,7 @@ hugo new site new-site
 
 ```bash
 cd new-site/themes
-git clone https://github.com/dirkolbrich/hugo-theme-tailwindcss-starter new-theme-name
+git clone https://github.com/leggettc18/lenora new-theme-name
 ```
 
 - switch into the newly created theme folder, remove the git history from this starter repo and install the node packages
@@ -109,7 +112,7 @@ If you don't need any of these helpers anymore, just delete the corresponding li
 
 ## Deploy to Netlify
 
-If you use this starter theme and want to deploy your site to [Netlify](https://www.netlify.com/), you *MAY* encounter a build error which contains the following line:
+If you use this theme and want to deploy your site to [Netlify](https://www.netlify.com/), you *MAY* encounter a build error which contains the following line:
 
 ```bash
 ERROR {your deploy time here} error: failed to transform resource: POSTCSS: failed to transform "css/styles.css" (text/css): PostCSS not found; install with "npm install postcss-cli". See https://gohugo.io/hugo-pipes/postcss/
