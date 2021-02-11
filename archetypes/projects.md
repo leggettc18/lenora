@@ -4,6 +4,6 @@ title = {{ replace .Name "-" " " | title }}
 date = {{ .Date }}
 description =
 tags = []
-categories = ["Projects"]
+categories = ["Portfolio"]
 github =
 +++

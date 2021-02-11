@@ -27,6 +27,55 @@ npm install -g autoprefixer
 
 Make sure to use a minimum Hugo version of v0.69.0 and above.
 
+## Using as a theme for your site.
+
+- start a new Hugo site
+
+```bash
+hugo new site new-site
+```
+
+- switch into the theme folder an clone the starter repo
+
+```bash
+cd new-site/themes
+git clone https://github.com/leggettc18/lenora
+```
+
+- add the following to your site's config.toml
+
+```toml
+theme = "lenora"
+```
+
+This theme comes with an archetype for "projects". For some automatic
+portfolio building. So if you create a new project content with
+
+```bash
+hugo new project/new-project.md
+```
+
+and if you *don't* currently have an archetypes folder in your site, your content will get the following
+default frontmatter.
+
+```toml
++++
+author =
+title = "New Project"
+date = {{ .Date }}
+description =
+tags = []
+categories = ["Portfolio"]
+github =
++++
+```
+
+Notice the `github =` parameter. If you provide this parameter, it will add a button
+to the web page underneath the title that says "Check it out in Github!". Technically
+you can provide any link here, but the text of the button will not change. Also note
+that your content does not have to be in a `projects` folder to use the github parameter.
+All the `projects` folder does is automatically add the above frontmatter.
+
 ## Basic usage to develop a separate Theme repo
 
 - clone and rename the repo
