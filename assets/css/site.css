@@ -45,3 +45,12 @@ hr {
   width: 100%;
   grid-column: 1 / 4;
 }
+
+.full-bleed > * {
+  grid-column: 2;
+}
+
+.bg-hero {
+  background-image: url('/hero.jpg');
+
+}
