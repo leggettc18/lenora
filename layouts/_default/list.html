@@ -1,5 +1,5 @@
 {{ define "main" }}
-<div class="mx-4 md:mx-12 lg:mx-24 my-16">
+<div class="mx-4 md:mx-12 lg:mx-12 my-16">
     <h1 class="font-serif font-thin text-5xl text-gray-500 mt-3 py-3 text-center">
             My {{ .Title }}
         </h1>
@@ -8,15 +8,15 @@
     <article class="text-gray-700 sm:mx-12 my-8 wrapper">
         <div class="flex gap-x-8 items-center transition duration-300 p-4 rounded-md border-1 hover:shadow-lg transform hover:-translate-x-0.5 hover:-translate-y-0.5">
             {{if isset .Params "image"}}
-            <div>
+            <div class="hidden sm:block">
                 <img src="/{{.Params.image}}" class="h-auto w-96" />
             </div>
             {{ else }}
-            <div class="h-auto w-96">
+            <div class="hidden sm:block h-full w-96 rounded-md border-2 border-purple-200 bg-gradient-to-tr from-purple-100 to-purple-300">
             </div>
             {{ end }}
             <div>
-        <h2 class="font-bold font-thin text-3xl text-gray-700"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+        <h2 class="font-bold font-thin text-3xl text-gray-700 text-center"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
         <div>
             {{ .Summary }}
             {{ if .Truncated }}
