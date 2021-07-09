@@ -4,14 +4,18 @@
     <title>{{ block "title" . }}
     {{- .Title }} - {{ .Site.Title -}}
     {{ end }}</title>
+    <meta property="og:title" content="{{- .Title }} - {{ .Site.Title -}}" />
+    <meta name="twitter:card" content="summary" />
     {{- if .Description }}
     <meta name="description" content="{{ .Description }}" />
+    <meta property="og:description" content="{{ .Description }}" />
     {{ end -}}
     {{- if .Keywords }}
     <meta name="keywords" content="{{ delimit .Keywords "," }}" />
     {{ end -}}
     {{- if .Params.Author }}
     <meta name="author" content="{{ .Params.Author}}" />
+    <meta name="twitter:creator" content="@leggettc18" />
     {{ end -}}
     {{ hugo.Generator }}
 
