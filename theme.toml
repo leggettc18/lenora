@@ -1,7 +1,7 @@
 # theme.toml template for a Hugo theme
 # See https://github.com/gohugoio/hugoThemes#themetoml for an example
 
-name = "hugo-theme-tailwindcss-starter"
+name = "lenora"
 license = "MIT"
 licenselink = "https://github.com/dirkolbrich/hugo-theme-tailwindcss-starter/blob/master/LICENSE"
 description = "A boilerplate starter theme using Tailwind CSS."
@@ -11,5 +11,5 @@ features = []
 min_version = "0.69"
 
 [author]
-  name = "Dirk Olbrich"
-  homepage = "https://github.com/dirkolbrich/"
+  name = "Christopher Leggett"
+  homepage = "https://github.com/lenora/"

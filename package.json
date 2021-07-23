@@ -6,26 +6,16 @@
     "maintained node versions",
     "not dead"
   ],
-  "comments": {
-    "dependencies": {},
-    "devDependencies": {
-      "@tailwindcss/typography": "project",
-      "autoprefixer": "project",
-      "postcss": "project",
-      "postcss-cli": "project",
-      "postcss-purgecss": "project",
-      "tailwindcss": "project"
-    }
-  },
   "dependencies": {},
   "description": "Starter files for a Hugo theme with Tailwindcss",
   "devDependencies": {
-    "@tailwindcss/typography": "^0.3.0",
-    "autoprefixer": "^10.0.4",
-    "postcss": "^8.1.10",
-    "postcss-cli": "^8.0.0",
-    "postcss-purgecss": "^2.0.3",
-    "tailwindcss": "^2.0.1"
+      "@fullhuman/postcss-purgecss": "^4.0.3",
+      "@tailwindcss/typography": "^0.4.0",
+      "autoprefixer": "^10.2.5",
+      "postcss": "^8.2.15",
+      "postcss-cli": "^8.3.1",
+      "postcss-import": "^14.0.2",
+      "tailwindcss": "^2.1.2"
   },
   "license": "MIT",
   "main": "index.js",
