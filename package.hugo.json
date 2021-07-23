@@ -1,0 +1,26 @@
+{
+    "name": "lenora",
+    "version": "0.1.1",
+    "description": "Starter files for a Hugo theme with Tailwindcss",
+    "main": "index.js",
+    "repository": "https://github.com/leggettc18/lenora",
+    "author": "leggettc18 <chris@leggett.dev>",
+    "license": "MIT",
+    "scripts": {
+        "start": "hugo --gc"
+    },
+    "devDependencies": {
+        "@tailwindcss/typography": "^0.3.0",
+        "autoprefixer": "^10.0.4",
+        "postcss": "^8.1.10",
+        "postcss-cli": "^8.0.0",
+        "postcss-purgecss": "^2.0.3",
+        "tailwindcss": "^2.0.1"
+    },
+    "browserslist": [
+        "last 1 version",
+        "> 1%",
+        "maintained node versions",
+        "not dead"
+    ]
+}
