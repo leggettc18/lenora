@@ -1,12 +1,67 @@
-/* Tailwind base - put variables under: tailwind.config.js */
-@import "node_modules/tailwindcss/base";
-/* Tailwind component classes registered by plugins*/
-@import "node_modules/tailwindcss/components";
-/* Site Specific */
-@import "assets/css/site";
-/* Tailwind's utility classes - generated based on config file */
-@import "node_modules/tailwindcss/utilities";
+@tailwind base;
+@tailwind compoennts;
+@tailwind utilities;
 
-.highlight {
-  padding: 1rem;
+@layer base {
+    .starter {
+        color: blue;
+    }
+
+    pre {
+        padding: 1rem;
+    }
+
+    a {
+        color: #b794f4;
+    }
+
+    a:hover {
+        color: #000000;
+    }
+
+    p {
+        margin: 1rem;
+    }
+
+    /* purgecss ignore */
+    img[src$='#center'] {
+        display: block;
+        margin: 0.7rem auto;
+    }
+
+    .logo {
+        width: 2rem;
+    }
+
+    hr {
+        border-width: 1px;
+    }
+
+    .wrapper {
+        display: grid;
+        grid-template-columns:
+            1fr
+            1fr
+        min(65ch, 100%)
+        1fr
+        1fr;
+    }
+
+    .wrapper > * {
+        grid-column: 2 / 5;
+    }
+
+    /* purgecss ignore */
+    .full-bleed {
+        width: 100%;
+        grid-column: 1 / 6;
+    }
+
+    .full-bleed > * {
+        grid-column: 2;
+    }
+
+    .bg-hero {
+        background-image: url('/hero.jpg');
+    }
 }
