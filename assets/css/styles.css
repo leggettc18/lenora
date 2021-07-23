@@ -2,7 +2,6 @@
 @tailwind compoennts;
 @tailwind utilities;
 
-@layer base {
     .starter {
         color: blue;
     }
@@ -64,4 +63,3 @@
     .bg-hero {
         background-image: url('/hero.jpg');
     }
-}

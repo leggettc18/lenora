@@ -1,21 +1,21 @@
 {
-    "name": "hugo-theme-tailwindcss-starter",
+    "name": "lenora",
     "version": "0.1.1",
     "description": "Starter files for a Hugo theme with Tailwindcss",
     "main": "index.js",
-    "repository": "https://github.com/dirkolbrich/hugo-theme-tailwindcss-starter",
-    "author": "dirkolbrich <github@dirkolbrich.de>",
+    "repository": "https://github.com/leggettc18/lenora",
+    "author": "leggettc18 <chris@leggett.dev>",
     "license": "MIT",
     "scripts": {
         "start": "hugo --gc"
     },
     "devDependencies": {
-        "@fullhuman/postcss-purgecss": "^2.3.0",
-        "autoprefixer": "^9.8.6",
-        "postcss": "^7.0.32",
-        "postcss-cli": "^7.1.1",
-        "postcss-import": "^12.0.1",
-        "tailwindcss": "^2.1.2"
+        "@tailwindcss/typography": "^0.3.0",
+        "autoprefixer": "^10.0.4",
+        "postcss": "^8.1.10",
+        "postcss-cli": "^8.0.0",
+        "postcss-purgecss": "^2.0.3",
+        "tailwindcss": "^2.0.1"
     },
     "browserslist": [
         "last 1 version",
