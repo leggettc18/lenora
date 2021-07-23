@@ -6,7 +6,8 @@ module.exports = {
   purge: {
     options: {
       whitelist: [
-        'img'
+        'img',
+        'pre'
       ]
     }
   },
