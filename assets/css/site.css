@@ -2,6 +2,10 @@
   color: blue;
 }
 
+pre {
+  padding: 1rem;
+}
+
 a {
   color: #b794f4;
 }
