@@ -4,7 +4,11 @@
             My {{ .Title }}
         </h1>
         <div class="border-b-2"></div>
-{{ range .Pages }}
+{{ $pages := .Pages }}
+{{if eq .Type "projects"}}
+{{ $pages = .Pages.ByParam "portfolio_score"}}
+{{ end }}
+{{ range $pages.Reverse }}
     <article class="text-gray-700 sm:mx-12 my-8 wrapper">
         <div class="flex gap-x-8 items-center transition duration-300 p-4 rounded-md border-1 hover:shadow-lg transform hover:-translate-x-0.5 hover:-translate-y-0.5">
             {{if isset .Params "image"}}
