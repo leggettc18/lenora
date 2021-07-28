@@ -6,11 +6,10 @@
         color: blue;
     }
 
-    pre {
-        padding: 1rem;
+    pre, .highlight pre {
+        overflow-x: auto;
+        font-size: smaller;
     }
-
-    pre code { white-space: pre-wrap; }
 
     a {
         color: #b794f4;
