@@ -62,11 +62,11 @@
         grid-column: 2;
     }
 
-    .bg-hero {
+    /* .bg-hero {
         background-image: url('/hero.jpg');
         background-size: cover;
         animation: fadein 0.5s;
-    }
+    } */
 
     @keyframes fadein {
         from { opacity: 0; }
