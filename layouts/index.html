@@ -11,34 +11,44 @@
 
             @media (max-width: 767px) {
                 .bg-hero {
-                    background-image: url('{{ $extraSmall.RelPermalink }}')
+                    background-image: url('{{ $extraSmall.RelPermalink }}');
+                    animation: fadein 1s;
                 }
             }
 
             @media (min-width: 768px) {
                 .bg-hero {
-                    background-image: url('{{ $small.RelPermalink }}')
+                    background-image: url('{{ $small.RelPermalink }}');
+                    animation: fadein 1s;
                 }
             }
 
             @media (min-width: 992px) {
                 .bg-hero {
-                    background-image: url('{{ $medium.RelPermalink }}')
+                    background-image: url('{{ $medium.RelPermalink }}');
+                    animation: fadein 1s;
                 }
             }
 
             @media (min-width: 1200px) {
                 .bg-hero {
-                    background-image: url('{{ $large.RelPermalink }}')
+                    background-image: url('{{ $large.RelPermalink }}');
+                    animation: fadein 1s;
                 }
             }
+
         {{ end }}
     {{ end }}
 {{ else }}
 .bg-hero {
-    background-image: url('{{ .Site.Params.hero_image | relURL }}')
+    background-image: url('{{ .Site.Params.hero_image | relURL }}');
+    animation: fadein 1s;
 }
 {{ end }}
+@keyframes fadein {
+    from {opacity:0;}
+    to {opacity:1;}
+}
 </style>
 <article class="text-center text-gray-700 prose lg:prose-xl">
     <div class="bg-hero min-h-9 md:min-h-screen bg-cover bg-no-repeat backdrop-filter backdrop-blur-lg">
