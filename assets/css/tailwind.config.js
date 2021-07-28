@@ -14,6 +14,7 @@ module.exports = {
             },
             a: {
               color: "#b794f4",
+              'text-decoration': "none",
             },
           },
         },
