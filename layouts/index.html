@@ -1,15 +1,15 @@
 {{ define "main" }}
-<article class="text-center text-gray-700">
+<article class="text-center text-gray-700 prose lg:prose-xl">
     <div class="bg-hero min-h-9 md:min-h-screen bg-cover bg-no-repeat backdrop-filter backdrop-blur-lg">
         <div class="wrapper min-h-full md:min-h-screen py-12 md:py-24">
             <div class="flex flex-col justify-between content-center h-full">
                 <h1 class="font-serif font-thin text-5xl text-gray-500 bg-gray-100 bg-opacity-75 backdrop-filter backdrop-blur-sm p-4 my-4">{{ .Title }}</h1>
-                <img src="me.jpg" class="mx-auto inline rounded-full h-96 w-auto"/>
+                <img src="me.jpg" class="mx-auto inline rounded-full h-56 sm:h-80 md:h-96 w-auto"/>
                 <div class="bg-gray-100 bg-opacity-75 backdrop-filter backdrop-blur-sm p-4 my-4">
                     {{ .Content }}
                 </div>
                 <div class="flex justify-center">
-                <div class="bg-gray-800 p-8 rounded-full">
+                <div class="bg-gray-100 bg-opacity-75 p-8 rounded-full">
                 <svg class="arrows">
                     <path class="a1" d="M0 0 L30 32 L60 0"></path>
                     <path class="a2" d="M0 20 L30 52 L60 20"></path>
