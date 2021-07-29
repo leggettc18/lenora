@@ -17,6 +17,7 @@
     <meta name="author" content="{{ .Params.Author}}" />
     <meta name="twitter:creator" content="@leggettc18" />
     {{ end -}}
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
     {{ hugo.Generator }}
 
     {{- $styles := resources.Get "css/styles.css" | postCSS (dict "config" "./assets/css/postcss.config.js") -}}
@@ -28,6 +29,5 @@
     {{ end -}}
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
     <meta property="og:image" content="https://chrisleggett.me/me.jpg" />
 </head>
