@@ -17,7 +17,6 @@
     <meta name="author" content="{{ .Params.Author}}" />
     <meta name="twitter:creator" content="@leggettc18" />
     {{ end -}}
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
     {{ hugo.Generator }}
 
     {{- $styles := resources.Get "css/styles.css" | postCSS (dict "config" "./assets/css/postcss.config.js") -}}
