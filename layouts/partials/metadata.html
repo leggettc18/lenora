@@ -1,0 +1,11 @@
+{{ $dateTime := .PublishDate.Format "2006-01-02" }}
+{{ $dateFormat := .Site.Params.dateFormat | default "Jan 2, 2006" }}
+<div class="flex flex-row flex-wrap space-x-2 items-center p-2">
+<time datetime="{{ $dateTime }}">{{ .PublishDate.Format $dateFormat }}</time>
+{{ with .Params.tags }}
+{{ range . }}
+{{ $href := print (absURL "tags/") (urlize .) }}
+<a class="rounded bg-purple-400 hover:bg-purple-700 text-white p-1" href="{{ $href }}">{{ . }}</a>
+{{ end }}
+{{ end }}
+</div>
