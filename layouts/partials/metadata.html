@@ -5,7 +5,7 @@
 {{ with .Params.tags }}
 {{ range . }}
 {{ $href := print (absURL "tags/") (urlize .) }}
-<a class="rounded bg-purple-400 hover:bg-purple-700 text-white px-1" href="{{ $href }}">{{ . }}</a>
+<a class="rounded bg-purple-400 hover:bg-purple-700 text-white px-1 my-1" href="{{ $href }}">{{ . }}</a>
 {{ end }}
 {{ end }}
 </div>
