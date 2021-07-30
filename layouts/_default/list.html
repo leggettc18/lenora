@@ -9,11 +9,13 @@
 {{ $pages = .Pages.ByParam "portfolio_score"}}
 {{ end }}
 {{ range $pages.Reverse }}
+    {{ $page := . }}
     <article class="text-gray-700 sm:mx-12 my-8 wrapper">
         <div class="flex gap-x-8 items-center transition duration-300 p-4 rounded-md border-1 hover:shadow-lg transform hover:-translate-x-0.5 hover:-translate-y-0.5">
-            {{if isset .Params "image"}}
+            {{if isset $page.Params "image"}}
+            {{ $image := $page.Resources.GetMatch (printf "%s%s" "images/" $page.Params.image) }}
             <div class="hidden sm:block">
-                <img src="/{{.Params.image}}" class="h-auto w-96" />
+                <img src="{{$image.RelPermalink}}" class="h-auto w-96" />
             </div>
             {{ else }}
             <div class="hidden sm:block h-full w-96 rounded-md border-2 border-purple-200 bg-gradient-to-tr from-purple-100 to-purple-300">
