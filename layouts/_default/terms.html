@@ -5,8 +5,8 @@
     <div class="flex flex-row flex-wrap space-x-2 justify-center">
     {{ range .Data.Terms.Alphabetical }}
     <p>
-        <a class="rounded border text-white bg-purple-400 hover:bg-purple-700 p-3 border-purple-400" href="{{ .Page.Permalink }}">
-            <span class="rounded p-2 m-1 bg-white text-gray-700">{{ .Count }}</span> {{ .Page.Title }}
+        <a class="rounded border text-white bg-purple-400 hover:bg-purple-700 px-2 py-1 border-purple-400" href="{{ .Page.Permalink }}">
+            <span class="rounded px-1 m-1 bg-white text-gray-700">{{ .Count }}</span> {{ .Page.Title }}
         </a>
     </p>
     {{ end }}
