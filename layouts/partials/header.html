@@ -46,6 +46,11 @@
                 <a href="{{ .Permalink }}" class="text-gray-400 hover:text-purple-400">{{ .Title }}</a>
             </div>
             {{ end }}
+            {{ with .Site.GetPage "/tags" }}
+            <div>
+                <a href="{{ .Permalink }}" class="text-gray-400 hover:text-purple-400">{{ .Title }}</a>
+            </div>
+            {{ end }}
         </div>
     </nav>
 </header>
