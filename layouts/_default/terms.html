@@ -1,0 +1,15 @@
+{{ define "main" }}
+<article class="prose max-w-none sm:mx-12 wrapper mx-4 md:mx-12 lg:mx-24 lg:px-24 sm:mt-16 mb-8">
+    <h1 class="font-bold text-3xl text-gray-700 text-center p-4">{{ .Title }}</h1>
+    <div class="full-bleed border-b"></div>
+    <div class="flex flex-row flex-wrap space-x-2 justify-center">
+    {{ range .Data.Terms.Alphabetical }}
+    <p>
+        <a class="rounded border text-white bg-purple-400 hover:bg-purple-700 p-3 border-purple-400" href="{{ .Page.Permalink }}">
+            <span class="rounded p-2 m-1 bg-white text-gray-700">{{ .Count }}</span> {{ .Page.Title }}
+        </a>
+    </p>
+    {{ end }}
+    </div>
+</article>
+{{ end }}

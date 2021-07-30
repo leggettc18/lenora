@@ -20,6 +20,9 @@ module.exports = {
             a: {
               color: "#b794f4",
               'text-decoration': "none",
+              '&:hover': {
+                color: "#000000",
+              }
             },
           },
         },
@@ -27,6 +30,7 @@ module.exports = {
     },
   },
   variants: {},
+  important: "html",
   plugins: [
     require('@tailwindcss/typography'),
   ]
