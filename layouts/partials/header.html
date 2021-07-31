@@ -36,20 +36,15 @@
         </label>
 
         <div id="nav-menu" class="sm:flex w-full sm:w-auto hidden sm:block mt-2 sm:mt-0 sm:space-x-2">
-            {{ with .Site.GetPage "/about" }}
-            <div>
-                <a href="{{ .Permalink }}" class="text-gray-400 hover:text-purple-400">{{ .Title }}</a>
-            </div>
+            {{ range .Site.Menus.main }}
+            <a class="nav-link flex flex-row items-center" href="{{ .URL }}">
+            {{ if .Pre }}
+            {{ $icon := printf "<i data-feather=\"%s\" class=\"pr-1\"></i> " .Pre | safeHTML }}
+            {{ $icon }}
             {{ end }}
-            {{ range .Site.Sections }}
-            <div>
-                <a href="{{ .Permalink }}" class="text-gray-400 hover:text-purple-400">{{ .Title }}</a>
-            </div>
-            {{ end }}
-            {{ with .Site.GetPage "/tags" }}
-            <div>
-                <a href="{{ .Permalink }}" class="text-gray-400 hover:text-purple-400">{{ .Title }}</a>
-            </div>
+            {{ $text := print .Name | safeHTML }}
+            {{ $text }}
+            </a>
             {{ end }}
         </div>
     </nav>
