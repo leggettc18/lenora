@@ -1,41 +1,32 @@
 {{ define "main" }}
-<div class="prose max-w-none mx-4 md:mx-12 xl:mx-48 my-16">
+<div class="prose max-w-none mx-4 md:mx-12 xl:mx-48 my-16 wrapper">
     <h1 class="mt-3 py-3 text-center">
             {{title .Title }}
         </h1>
-        <div class="border-b-2"></div>
+        <div class="border-b-2 full-bleed"></div>
 {{ $pages := .Pages }}
 {{if eq .Type "projects"}}
 {{ $pages = .Pages.ByParam "portfolio_score"}}
 {{ end }}
+<div class="flex flex-row flex-wrap justify-center">
 {{ range $pages.Reverse }}
     {{ $page := . }}
-    <article class="text-gray-700 sm:mx-12 my-8 wrapper">
-        <div class="flex gap-x-8 items-center transition duration-300 p-4 rounded-md border-1 hover:shadow-lg transform hover:-translate-x-0.5 hover:-translate-y-0.5">
-            {{if isset $page.Params "image"}}
-            {{ $image := $page.Resources.GetMatch (printf "%s%s" "images/" $page.Params.image) }}
-            <div class="hidden sm:block">
-                <img src="{{$image.RelPermalink}}" class="h-auto w-96" />
+        <div class="flex flex-col gap-x-8 items-center p-4 rounded-md border-1 shadow-lg xl:w-2/5 w-auto flex-grow m-4">
+            <h2 class="font-bold font-thin text-3xl text-gray-700 text-center"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+            <div class="flex flex-col justify-center">
+                <div class="flex justify-center">
+                {{ partial "metadata.html" . }}
+                </div>
+                {{ .Summary }}
+                {{ if .Truncated }}
+                <a href={{.RelPermalink}}>Read more...</a>
+                {{ end }}
+                {{ if isset .Params "github" }}
+                | <a href="{{ .Params.github }}">Check it out on Github!</a>
+                {{ end }}
             </div>
-            {{ else }}
-            <div class="hidden sm:block h-full w-96 rounded-md border-2 border-purple-200 bg-gradient-to-tr from-purple-100 to-purple-300">
-            </div>
-            {{ end }}
-            <div>
-        <h2 class="font-bold font-thin text-3xl text-gray-700 text-center"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-        <div>
-            {{ partial "metadata.html" . }}
-            {{ .Summary }}
-            {{ if .Truncated }}
-            <a href={{.RelPermalink}}>Read more...</a>
-            {{ end }}
-            {{ if isset .Params "github" }}
-             | <a href="{{ .Params.github }}">Check it out on Github!</a>
-            {{ end }}
         </div>
-    </div>
-        </div>
-    </article>
 {{ end }}
+</div>
 </div>
 {{ end }}
