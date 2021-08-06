@@ -12,6 +12,9 @@ module.exports = {
             nav: {
               a: {
                 color: theme('colors.gray.400'),
+                '&:hover': {
+                  color: theme('colors.purple.400'),
+                }
               }
             },
             h1: {
