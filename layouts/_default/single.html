@@ -17,7 +17,9 @@
     {{ end }}
     {{ .Content }}
 </article>
+{{ if not (eq .Name "About")  }}
 {{ if .Site.DisqusShortname }}
 {{ partial "disqus.html" . }}
+{{ end }}
 {{ end }}
 {{ end }}
