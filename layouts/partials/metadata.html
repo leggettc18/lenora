@@ -1,13 +1,41 @@
 {{ $dateTime := .PublishDate.Format "2006-01-02" }}
 {{ $dateFormat := .Site.Params.dateFormat | default "Jan 2, 2006" }}
-<div class="flex flex-row flex-wrap items-center p-2 space-x-2">
-    <i data-feather="calendar"></i>
-    <time datetime="{{ $dateTime }}">{{ .PublishDate.Format $dateFormat }}</time>
-    {{ with .Params.tags }}
-    <i data-feather="tag"></i>
-    {{ range . }}
-    {{ $href := print (absURL "tags/") (urlize .) }}
-    <a class="rounded bg-purple-400 hover:bg-purple-700 text-white px-1 my-1" href="{{ $href }}">{{ . }}</a>
-    {{ end }}
-    {{ end }}
+<div class="flex flex-row justify-between">
+    <div class="flex flex-row flex-wrap items-center p-2 space-x-2">
+        <i data-feather="calendar"></i>
+        <time datetime="{{ $dateTime }}">{{ .PublishDate.Format $dateFormat }}</time>
+        {{ with .Params.tags }}
+        <i data-feather="tag"></i>
+        {{ range . }}
+        {{ $href := print (absURL "tags/") (urlize .) }}
+        <a class="rounded bg-purple-400 hover:bg-purple-700 text-white px-1 my-1" href="{{ $href }}">{{ . }}</a>
+        {{ end }}
+        {{ end }}
+    </div>
+    <div class="flex flex-row space-x-1">
+        <a type="button"
+            class="w-0.125 my-8 mx-auto bg-gray-300 text-gray-800 font-bold rounded-md px-2 py-2 select-none hover:text-purple-400 focus:outline-none focus:shadow-outline text-center flex items-center"
+            href="https://twitter.com/intent/tweet?url={{ .Permalink }}&amp;text={{ .Title }}" target="_blank" rel="noopener" aria-label="Share on Twitter">
+            <i data-feather="twitter"></i>
+        </a>
+        <a type="button"
+            class="w-0.125 my-8 mx-auto bg-gray-300 text-gray-800 font-bold rounded-md px-2 py-2 select-none hover:text-purple-400 focus:outline-none focus:shadow-outline text-center flex items-center"
+            href="https://www.facebook.com/sharer.php?u={{ .Permalink }}" target="_blank" rel="noopener"
+            aria-label="Share on Facebook">
+            <i data-feather="facebook"></i>
+        </a>
+        <a type="button"
+            class="w-0.125 my-8 mx-auto bg-gray-300 text-gray-800 font-bold rounded-md px-2 py-2 select-none hover:text-purple-400 focus:outline-none focus:shadow-outline text-center flex items-center"
+            href="https://www.linkedin.com/sharing/share-offsite?url={{ .Permalink }}&amp;source={{ .Permalink }}&amp;title={{ .Title }}&amp;summary={{ .Description }}" target="_blank" rel="noopener"
+            aria-label="Share on LinkedIn">
+            <i data-feather="linkedin"></i>
+        </a>
+        {{ if isset .Params "github" }}
+        <a type="button"
+            class="w-0.125 my-8 mx-auto bg-gray-300 text-gray-800 font-bold rounded-md px-2 py-2 select-none hover:text-purple-400 focus:outline-none focus:shadow-outline text-center flex items-center"
+            href="{{ .Params.github }}">
+            <i data-feather="github"></i>
+        </a>
+        {{ end }}
+    </div>
 </div>
