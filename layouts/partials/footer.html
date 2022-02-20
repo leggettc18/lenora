@@ -1,8 +1,23 @@
 <footer class="w-full text-center border-t border-gray-200 p-4 pin-b text-xs text-gray-400">
     <div class="flex items-center justify-between">
-        <p>made with <a href="https://gohugo.io" class="underline hover:text-blue-400">Hugo</a> and <a href="https://tailwindcss.com" class="underline hover:text-blue-400">TailwindCSS</a></p>
+        <div class="flex flex-col items-center justify-between">
+            <p class="p-0 m-0">made with <a href="https://gohugo.io" class="underline hover:text-blue-400">Hugo</a> and
+                <a href="https://tailwindcss.com" class="underline hover:text-blue-400">TailwindCSS</a></p>
+            {{ if .Site.Params.goatCounterCode }}
+            <p class="p-0 m-0">uses <a href="https://goatcounter.com"
+                    class="underline hover:text-blue-400">GoatCounter</a>
+                for
+                analytics
+            </p>
+            {{ end }}
+        </div>
         <div class="flex items-center">
-            <svg class="w-6 h-6 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+            <svg class="w-6 h-6 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                </path>
+            </svg>
             <a href="mailto:chris@leggett.dev">chris@leggett.dev</a>
         </div>
     </div>
