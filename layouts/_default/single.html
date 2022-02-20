@@ -1,22 +1,22 @@
 {{ define "main" }}
 <article class="prose max-w-none sm:mx-12 wrapper mx-4 md:mx-12 lg:mx-24 lg:px-24 sm:mt-16 mb-8">
-        <h1 class="font-bold text-3xl text-gray-700 text-center p-4">{{ .Title }}</h1>
-        {{ if not (eq .Name "About")}}
-        {{ partial "metadata.html" . }}
-        {{ end }}
+    <h1 class="font-bold text-3xl text-gray-700 text-center p-4">{{ .Title }}</h1>
+    {{ if not (eq .Name "About")}}
+    {{ partial "metadata.html" . }}
+    {{ end }}
     <div class="full-bleed border-b">
     </div>
     <div class="flex flex-row justify-center">
-    {{ if .Params.image}}
+        {{ if .Params.image}}
         {{ $page := . }}
         {{ with .Resources.GetMatch (print "images/" $page.Params.image) }}
-            {{ $image := . }}
-            {{ if (intersect $image.MediaType.Suffixes (slice "png" "jpg" "gif") )}}
-                {{ $image = $image.Resize "x300"}}
-                <img src="{{$image.RelPermalink}}" />
-            {{ end }}
+        {{ $image := . }}
+        {{ if (intersect $image.MediaType.Suffixes (slice "png" "jpg" "gif") )}}
+        {{ $image = $image.Resize "x300"}}
+        <img src="{{$image.RelPermalink}}" />
         {{ end }}
-    {{ end }}
+        {{ end }}
+        {{ end }}
     </div>
     {{ .Content }}
 </article>

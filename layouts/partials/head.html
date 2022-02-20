@@ -2,8 +2,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{{ block "title" . }}
-    {{- .Title }} - {{ .Site.Title -}}
-    {{ end }}</title>
+        {{- .Title }} - {{ .Site.Title -}}
+        {{ end }}</title>
     <meta property="og:title" content="{{- .Title }} - {{ .Site.Title -}}" />
     <meta name="twitter:card" content="summary" />
     {{- if .Description }}
@@ -34,4 +34,5 @@
     {{ printf `
     <link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
     {{ end -}}
+    <link rel="canonical" href="{{.Permalink}}">
 </head>

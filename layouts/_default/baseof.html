@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html lang='{{ .Site.LanguageCode }}'>
-    {{ partial "head.html" . }}
-    <body class="flex flex-col min-h-screen bg-gray-100">
-        {{- partial "dev-size-indicator.html" . -}}
-        {{- partial "header.html" . -}}
-        <main class="flex-1">
+{{ partial "head.html" . }}
+
+<body class="flex flex-col min-h-screen bg-gray-100">
+    {{- partial "dev-size-indicator.html" . -}}
+    {{- partial "header.html" . -}}
+    <main class="flex-1">
         {{- block "main" . }}{{- end }}
-        </main>
-        {{- partial "dev-parameters.html" . -}}
-        {{- partial "footer.html" . -}}
-        {{- partial "script.html" . -}}
-    </body>
+    </main>
+    {{- partial "dev-parameters.html" . -}}
+    {{- partial "footer.html" . -}}
+    {{- partial "script.html" . -}}
+    {{ if $.Site.Params.goatCounterCode}}
+    {{ partial "goatcounter.html" . }}
+    {{ end }}
+</body>
+
 </html>
