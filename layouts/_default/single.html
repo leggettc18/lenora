@@ -12,7 +12,9 @@
         {{ with .Resources.GetMatch (print "images/" $page.Params.image) }}
         {{ $image := . }}
         {{ if (intersect $image.MediaType.Suffixes (slice "png" "jpg" "gif") )}}
+        {{ if (not (intersect $image.MediaType.Suffixes (slice "gif")) )}}
         {{ $image = $image.Resize "x300"}}
+        {{ end }}
         <img src="{{$image.RelPermalink}}" />
         {{ end }}
         {{ end }}
