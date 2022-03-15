@@ -4,6 +4,7 @@
     <title>{{ block "title" . }}
         {{- .Title }} - {{ .Site.Title -}}
         {{ end }}</title>
+    <meta name="description" content="{{ .Site.Params.Description }}" />
     <meta property="og:title" content="{{- .Title }} - {{ .Site.Title -}}" />
     <meta name="twitter:card" content="summary" />
     {{- if .Description }}
